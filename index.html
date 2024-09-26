@@ -47,8 +47,8 @@
 			<div class="row intro-text align-items-center justify-content-center">
 				<div class="col-md-10 text-center pt-5">
 
-					<h1 class="site-heading site-animate">Hello, I'm <strong class="d-block">Charles Anderson</strong></h1>
-					<strong class="d-block text-white text-uppercase letter-spacing">and this is My Rezume</strong>
+					<h1 class="site-heading site-animate">We will make you  <strong class="d-block">stright </strong></h1>
+					<strong class="d-block text-white text-uppercase letter-spacing">and this is the way to paradise</strong>
 
 				</div>
 			</div>
@@ -488,45 +488,43 @@
 				</div>
 
 				<div class="col-md-7 mb-5 mb-md-0">
-					<form action="" class="site-form">
+					<form id="submit-form" action="" class="site-form">
 						<h3 class="mb-5">Get In Touch</h3>
 						<div class="form-group">
-							<input type="text" class="form-control px-3 py-4" placeholder="Your Name">
+						  <input type="text" name="name" class="form-control px-3 py-4" placeholder="Your Name">
 						</div>
 						<div class="form-group">
-							<input type="email" class="form-control px-3 py-4" placeholder="Your Email">
+						  <input type="email" name="email" class="form-control px-3 py-4" placeholder="Your Email">
 						</div>
 						<div class="form-group">
-							<input type="email" class="form-control px-3 py-4" placeholder="Your Phone">
+						  <input type="text" name="phone" class="form-control px-3 py-4" placeholder="Your Phone">
 						</div>
 						<div class="form-group mb-5">
-							<textarea class="form-control px-3 py-4"cols="30" rows="10" placeholder="Write a Message"></textarea>
+						  <textarea name="message" class="form-control px-3 py-4" cols="30" rows="10" placeholder="Write a Message"></textarea>
 						</div>
 						<div class="form-group">
-							<input type="submit" class="btn btn-primary  px-4 py-3" value="Send Message">
+						  <input type="submit" class="btn btn-primary px-4 py-3" value="Send Message">
 						</div>
-					</form>
+					  </form>
+					  
 				</div>
 				<div class="col-md-5 pl-md-5">
 					<h3 class="mb-5">My Contact Details</h3>
 					<ul class="site-contact-details">
 						<li>
 							<span class="text-uppercase">Email</span>
-							site@gmail.com
+							peediyakkalvaiya@gmail.com
 						</li>
 						<li>
 							<span class="text-uppercase">Phone</span>
-							+30 976 1382 9921
+							+91 7034473463
 						</li>
-						<li>
-							<span class="text-uppercase">Fax</span>
-							+30 976 1382 9922
-						</li>
+						
 						<li>
 							<span class="text-uppercase">Address</span>
-							San Francisco, CA <br>
-							4th Floor8 Lower  <br>
-							San Francisco street, M1 50F
+							malappuram <br>
+							kerala <br>
+							india
 						</li>
 					</ul>
 				</div>
@@ -541,7 +539,7 @@
 			<div class="row mb-5">
 				<p class="col-12 text-center">
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true" ></i> by <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
+					Copyright &copy; <script>document.write(new Date().getFullYear());</script> All rights reserved |</i> by <a href="https://darulirfan.co" target="_blank" class="text-primary">Sunnimahal</a>
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 				</p>
 			</div>
@@ -581,6 +579,24 @@
 	<!-- Google Map -->
     <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     	<script src="js/google-map.js"></script> -->
-
+		<script>
+			$("#submit-form").submit((e)=>{
+				e.preventDefault()
+				$.ajax({
+					url:"https://script.google.com/macros/s/AKfycbzoiV8fES6Jg8tz4wE2sEmrU6t99e33YroZC-R4CuIq9N2AD2ym0nrIkuJtq4SBXMkr/exec",
+					data:$("#submit-form").serialize(),
+					method:"post",
+					success:function (response){
+						alert("Form submitted successfully")
+						window.location.reload()
+						//window.location.href="https://google.com"
+					},
+					error:function (err){
+						alert("Something Error")
+		
+					}
+				})
+			})
+		</script>
     </body>
     </html>
